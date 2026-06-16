@@ -379,22 +379,6 @@
     .feat-body h4 { font-weight: 600; font-size: 1rem; margin-bottom: 6px; }
     .feat-body p { color: var(--sub); font-size: 0.87rem; line-height: 1.65; }
 
-    /* ---- Pricing ---- */
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 52px; }
-    .price-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 32px 28px; display: flex; flex-direction: column; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
-    .price-card:hover { transform: translateY(-6px); border-color: rgba(255,45,117,0.25); box-shadow: 0 24px 64px rgba(255,45,117,0.12); }
-    .price-card.featured { border-color: rgba(255,45,117,0.45); background: rgba(255,45,117,0.05); }
-    .price-flag { align-self: flex-start; background: var(--grad); color: white; font-family: var(--mono); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 6px; margin-bottom: 14px; }
-    .price-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
-    .price-card .price-desc { color: var(--sub); font-size: 0.85rem; line-height: 1.6; margin-bottom: 18px; }
-    .price-amount { font-family: 'Space Grotesk', sans-serif; font-size: 2.1rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1; margin-bottom: 4px; }
-    .price-amount span { font-size: 0.92rem; font-weight: 500; color: var(--sub); }
-    .price-note { color: var(--sub); font-size: 0.78rem; margin-bottom: 22px; }
-    .price-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; }
-    .price-list li { color: var(--sub); font-size: 0.86rem; display: flex; gap: 9px; align-items: flex-start; line-height: 1.5; }
-    .price-list li::before { content: '✓'; color: var(--cyan); font-weight: 800; flex-shrink: 0; }
-    .price-card .btn-secondary, .price-card .btn-primary { margin-top: auto; text-align: center; }
-
     /* ---- Contact ---- */
     .contact-wrap { background: var(--surface); border-top: 1px solid rgba(255,255,255,0.05); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; margin-top: 52px; }
@@ -434,7 +418,6 @@
     }
     @media (max-width: 900px) {
       .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .pricing-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .media-stage { display: none; }
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -510,7 +493,6 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#showcase">Restoration</a></li>
     <li><a href="#how">How It Works</a></li>
-    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
   </ul>
 </nav>
@@ -750,42 +732,6 @@
   </section>
 </div>
 
-<!-- PRICING -->
-<section class="section" id="pricing">
-  <div class="center reveal">
-    <span class="section-tag">// Pricing</span>
-    <h2 class="section-title">Honest, <span class="grad-text">per-item</span> pricing</h2>
-    <p class="section-sub">Every collection is different, so request a free quote for an exact figure. Indicative starting prices below.</p>
-  </div>
-  <div class="pricing-grid">
-    <div class="price-card reveal">
-      <h3>Digitising</h3>
-      <p class="price-desc">Per tape, disc or batch of photos, captured to digital.</p>
-      <div class="price-amount">$15 <span>/ item</span></div>
-      <p class="price-note">Volume discounts for larger collections</p>
-      <ul class="price-list"><li>VHS, Hi8, MiniDV &amp; more</li><li>DVD to HD video</li><li>Photo, slide &amp; album scanning</li><li>Originals returned to you</li></ul>
-      <a href="#contact" class="btn-secondary">Get a Quote</a>
-    </div>
-    <div class="price-card featured reveal" style="transition-delay:.08s">
-      <span class="price-flag">Most Popular</span>
-      <h3>Digitise + Restore</h3>
-      <p class="price-desc">Capture plus AI restoration and 4K-quality enhancement.</p>
-      <div class="price-amount">$29 <span>/ item</span></div>
-      <p class="price-note">Best for treasured home movies</p>
-      <ul class="price-list"><li>Everything in Digitising</li><li>AI sharpening &amp; de-noising</li><li>Up to 4K-quality upscaling</li><li>Colour &amp; clarity correction</li></ul>
-      <a href="#contact" class="btn-primary">Get a Quote</a>
-    </div>
-    <div class="price-card reveal" style="transition-delay:.16s">
-      <h3>Cloud Hosting</h3>
-      <p class="price-desc">Your whole collection, streamed privately from anywhere.</p>
-      <div class="price-amount">$5 <span>/ month</span></div>
-      <p class="price-note">Cancel anytime &middot; first month free</p>
-      <ul class="price-list"><li>Private, secure streaming library</li><li>Share with family in a click</li><li>Watch on any device</li><li>Always backed up</li></ul>
-      <a href="#contact" class="btn-secondary">Get Started</a>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <div class="contact-wrap">
   <section class="section" id="contact">
@@ -794,7 +740,7 @@
         <span class="section-tag">// Get in touch</span>
         <h2 class="section-title">Ready to <span class="grad-text">preserve</span> them?</h2>
         <p class="section-sub" style="margin-bottom:32px">Tell us what you've got — tapes, discs, photos or all of the above — and we'll send a free, no-obligation quote and a return-by date.</p>
-        <div class="contact-detail"><div class="cd-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><a href="mailto:ned.padovan@live.com">ned.padovan@live.com</a></div>
+        <div class="contact-detail"><div class="cd-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><a href="mailto:info@preservemymemories.online">info@preservemymemories.online</a></div>
         <div class="contact-detail"><div class="cd-icon"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="11" rx="2"/><path d="M3 11h18M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div><span>Local drop-off &amp; safe postal service</span></div>
         <div class="contact-detail"><div class="cd-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><span>Your memories stay private — always</span></div>
       </div>
@@ -802,7 +748,7 @@
       <div class="form-box reveal" style="transition-delay:.12s">
         <!--
           This form uses Formspree. To receive submissions by email:
-          1. Sign up free at https://formspree.io with ned.padovan@live.com
+          1. Sign up free at https://formspree.io with info@preservemymemories.online
           2. Create a form and copy its endpoint (e.g. https://formspree.io/f/abcdwxyz)
           3. Replace YOUR_FORM_ID below with that endpoint.
           Until then, submissions won't be delivered (the email link above still works).
@@ -845,7 +791,7 @@
   <div class="chat-messages" id="chat-messages"></div>
   <div class="chat-suggestions" id="chat-suggestions">
     <button class="chat-suggestion" data-msg="What services do you offer?">Services</button>
-    <button class="chat-suggestion" data-msg="How much does it cost?">Pricing</button>
+    <button class="chat-suggestion" data-msg="How much does it cost?">Get a quote</button>
     <button class="chat-suggestion" data-msg="How does the cloud hosting work?">Cloud</button>
     <button class="chat-suggestion" data-msg="Can you upscale old videos and photos?">Upscaling</button>
   </div>
@@ -974,8 +920,8 @@ document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el))
   const RESPONSES = [
     { match: /\b(hi|hello|hey|howdy|g'day)\b/i, reply: "Hi there! 👋 I'm the Preserve My Memories studio assistant. Ask me about converting VHS, DVDs or photos, AI restoration & upscaling, cloud hosting, pricing or how to get started." },
     { match: /\b(service|offer|provide|what do you|what can)\b/i, reply: "We're a full memory-restoration studio:\n\n• 📼 VHS & tape conversion (VHS, VHS-C, Hi8, Video8, MiniDV, Betamax)\n• 💿 DVD to HD video\n• 📷 Photo, slide & album scanning\n• ✨ AI restoration & upscaling (up to 4K-quality)\n• ☁️ Private cloud hosting\n• 💾 USB or instant download delivery\n\nWant detail on any of these?" },
-    { match: /\b(price|cost|pricing|fee|charge|expensive|cheap|afford|how much|quote)\b/i, reply: "Pricing is per item:\n\n• Digitising from about $15 / item\n• Digitise + AI restoration from about $29 / item\n• Private cloud hosting $5 / month (first month free)\n\nVolume discounts for bigger collections. Send a quick message for a free, exact quote! 👉" },
-    { match: /\b(start|begin|get started|sign up|book|drop off|post|ship|send)\b/i, reply: "Easy to start! 🎬\n1. Message us (Contact section) or email ned.padovan@live.com\n2. Drop your items off or post them in safely\n3. We digitise (and restore if you'd like)\n4. You get your originals back plus digital copies\n\nWant me to point you to the quote form?" },
+    { match: /\b(price|cost|pricing|fee|charge|expensive|cheap|afford|how much|quote)\b/i, reply: "Every collection is different, so we price each project individually based on what you've got and whether you'd like AI restoration. The best way to get an exact figure is a free, no-obligation quote — just send us a quick message with roughly what you have, or email info@preservemymemories.online. 👉" },
+    { match: /\b(start|begin|get started|sign up|book|drop off|post|ship|send)\b/i, reply: "Easy to start! 🎬\n1. Message us (Contact section) or email info@preservemymemories.online\n2. Drop your items off or post them in safely\n3. We digitise (and restore if you'd like)\n4. You get your originals back plus digital copies\n\nWant me to point you to the quote form?" },
     { match: /\b(vhs|tape|hi8|video8|minidv|betamax|camcorder|cassette)\b/i, reply: "Yes! We convert all the common tape formats — VHS, VHS-C, Hi8, Video8, MiniDV and Betamax — into clean digital video, even worn-out tapes. Roughly how many do you have?" },
     { match: /\b(dvd|disc)\b/i, reply: "We pull the video off ageing DVDs and remaster it into sharp, future-proof HD — safe even if the disc later fails. We can also bundle it onto a USB or your cloud library. Want a quote?" },
     { match: /\b(photo|album|slide|negative|print|scan|picture)\b/i, reply: "We scan loose prints, full albums, slides and negatives at high resolution, and can AI-restore faded or damaged photos. Do you know roughly how many photos (or albums) you have?" },
@@ -984,10 +930,10 @@ document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el))
     { match: /\b(usb|download|delivery|deliver|receive|format|file)\b/i, reply: "You choose how to get your memories back: 💾 a labelled USB drive, an instant digital download, or streamed from your private cloud — or any combination. Your original tapes, discs and photos are always returned too." },
     { match: /\b(safe|secure|privacy|private|lose|lost|damage|original|trust)\b/i, reply: "Your memories are in safe hands. 🔒 Everything is digitised in-house — nothing shipped overseas or handed to third parties. Originals are returned to you, and files stay private: never shared or sold." },
     { match: /\b(how long|turnaround|timeframe|timeline|fast|quick|when|ready|wait)\b/i, reply: "Most jobs are done within 1–2 weeks. We'll give you a clear return-by date with your quote, and can rush urgent jobs (birthdays, funerals) — just ask. 📅" },
-    { match: /\b(contact|email|phone|reach|touch|talk|call)\b/i, reply: "Reach us at:\n\n✉️ ned.padovan@live.com\n\nOr use the quick form in the Contact section. We usually reply within one business day. 😊" },
+    { match: /\b(contact|email|phone|reach|touch|talk|call)\b/i, reply: "Reach us at:\n\n✉️ info@preservemymemories.online\n\nOr use the quick form in the Contact section. We usually reply within one business day. 😊" },
     { match: /\b(thank|thanks|cheers|awesome|great|perfect|brilliant|ta)\b/i, reply: "You're very welcome! 😊 Whenever you're ready, send a message for a free quote and we'll bring those memories back to life. Anything else?" }
   ];
-  const DEFAULT = "Great question! For anything specific, send us a quick message in the Contact section or email ned.padovan@live.com — we'll reply fast with an exact answer or quote. Anything else I can help with?";
+  const DEFAULT = "Great question! For anything specific, send us a quick message in the Contact section or email info@preservemymemories.online — we'll reply fast with an exact answer or quote. Anything else I can help with?";
 
   function addMsg(text, who) {
     const wrap = document.createElement('div');
